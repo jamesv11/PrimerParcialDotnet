@@ -1,0 +1,32 @@
+
+<nav class="navbar navbar-expand-lg ">
+  <a class="navbar-brand" [routerLink]="['/']">Emergencia covid</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" [routerLink]="['/']">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/personaRegistro']">Registro</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/personaConsulta']">Consulta</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <div class="dropdown">
+        <a class="btn btn-secondary dropdown-toggle" role="button" href="#" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <img src="https://icon-icons.com/icons2/1769/PNG/32/4092564-about-mobile-ui-profile-ui-user-website_114033.png" alt="">
+        </a>
+      
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+          <a class="dropdown-item" >Ingresar</a>
+        </div>
+      </div>
+    </form>
+  </div>
+</nav>

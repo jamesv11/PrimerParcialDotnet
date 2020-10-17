@@ -1,0 +1,65 @@
+<div class="main-contenedor">
+    <div class="Contenedor-form shadow-lg p-3 mb-5 rounded">
+        <h2>Registro</h2>
+        <form>
+            <div class="form-row ">
+                <div class="col-md-6 form-group">
+                    <label for="inputIdentifacion">Identificacion</label>
+                    <input type="text" class="form-control" name="inputIdentifacion" [(ngModel)]="persona.identifacion">
+                </div>
+                <div class="col-md-6 form-group">
+                    <label for="inputNombre">Nombre</label>
+                    <input type="text" class="form-control" name="inputNombre" [(ngModel)]="persona.nombre">
+                </div>
+                <div class="col-md-6 form-group">
+                    <label for="inputApellido">Apellido</label>
+                    <input type="text" class="form-control" name="inputApellido" [(ngModel)]="persona.apellido">
+                </div>
+                <div class="col-md-6 form-group">
+                    <label for="inputSexo">Sexo</label>
+                    <select class="form-control" name="inputSexo" [(ngModel)]="persona.sexo">
+                        <option>Seleccione..</option>
+                        <option>Masculino</option>
+                        <option>Femenino</option>
+                    </select>
+                </div>
+                <div class="col-md-6 form-group">
+                    <label for="inputEdad">Edad</label>
+                    <input type="number" class="form-control" name="inputEdad" [(ngModel)]="persona.edad">
+                </div>
+                <div class="col-md-6 form-group">
+                    <label for="inputDepartamento">Departamento</label>
+                    <input type="text" class="form-control" name="inputDepartamento" [(ngModel)]="persona.departamento">
+                </div>
+                <div class="col-md-6 form-group">
+                    <label for="inputCiudad">Ciudad</label>
+                    <input type="text" class="form-control" name="inputCiudad" [(ngModel)]="persona.ciudad">
+                </div>
+                <div class="col-md-6 form-group">
+                    <label for="inputValorApoyo">Valor del apoyo</label>
+                    <input type="number" class="form-control" name="inputValorApoyo" [(ngModel)]="persona.valorapoyo">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputModalidadApoyo">Modalidad de apoyo</label>
+                <select class="form-control" name="inputApoyo " [(ngModel)]="persona.modalidadapoyo">
+                    <option>Seleccione...</option>
+                    <option>Alimentario</option>
+                    <option>Economico</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="inputFechaRegistro">Fecha de registro</label>
+                <input type="date" class="form-control" name="inputFechaRegistro" [(ngModel)]="persona.fecha">
+            </div>
+            <button type="submit" class="btn btn-primary position">Registrar</button>
+        </form>
+    </div>
+    <div class="img-position">
+        <figure>
+            <img src="https://images.unsplash.com/photo-1580869318757-a6c605b061ed?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80"
+                alt="..." class="img-thumbnail">
+            <figcaption><span class="mensaje">Ayudanos a ayudar</span></figcaption>
+        </figure>
+    </div>
+</div>
