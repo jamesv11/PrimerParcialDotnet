@@ -1,13 +1,13 @@
 export class Persona {
-    identifacion: string;
+    identificacion: string;
     nombre: string;
     apellido: string;
     sexo: string;
     edad: number;
     departamento: string;
     ciudad: string;
-    valorapoyo: number;
-    modalidadapoyo: string;
+    valorApoyo: number;
+    modalidadApoyo: string;
     fecha: Date;
 
 }

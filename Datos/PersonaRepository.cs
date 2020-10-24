@@ -20,7 +20,7 @@ namespace Datos
         {
             using (var command = _connection.CreateCommand())
             {
-                command.CommandText = @"Insert Into Persona (Identificacion,Nombre,Apellido, Sexo, Edad , Departamento , Ciudad , ValorApoyo , ModalidadApoyo , Fecha) 
+                command.CommandText = @"Insert Into Persona (Identificacion,Nombre,Apellido,Sexo,Edad,Departamento,Ciudad,ValorApoyo,ModalidadApoyo,Fecha) 
                                         values (@Identificacion,@Nombre,@Apellido,@Sexo,@Edad,@Departamento,@Ciudad,@ValorApoyo,@ModalidadApoyo,@Fecha)";
                 command.Parameters.AddWithValue("@Identificacion", persona.Identificacion);
                 command.Parameters.AddWithValue("@Nombre", persona.Nombre);
@@ -83,7 +83,7 @@ namespace Datos
             persona.Ciudad = (string)dataReader["Ciudad"];
             persona.ValorApoyo = (decimal)dataReader["ValorApoyo"];
             persona.ModalidadApoyo = (string)dataReader["ModalidadApoyo"];
-            persona.Fecha = DateTime.Parse((string)dataReader["Fecha"]);
+            persona.Fecha = (DateTime)dataReader["Fecha"];
             return persona;
         }
 
