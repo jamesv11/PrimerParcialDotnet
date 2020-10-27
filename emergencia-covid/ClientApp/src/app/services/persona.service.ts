@@ -10,6 +10,7 @@ import { catchError,map,tap} from 'rxjs/operators';
 })
 export class PersonaService {
 
+  
   baseUrl: string;
   constructor(
     private http: HttpClient,
@@ -30,6 +31,7 @@ export class PersonaService {
         tap(_ => this.handleErrorService.log('datos enviados')),
         catchError(this.handleErrorService.handleError<Persona>('Registrar Persona',null))
         );
-
     }
+
+    
 }
