@@ -2,44 +2,43 @@
 using System.Collections.Generic;
 using Datos;
 using Entidad;
+using System.Linq;
+using Microsoft.EntityFrameworkCore;
 
 namespace Logica
 {
     public class PersonaService
     {
-        private readonly ConnectionManager _conexion;
-        private readonly PersonaRepository _repositorio;
-
-
-
-        public PersonaService(string connectionString)
+        private readonly EmergenciaContext _context;
+        public PersonaService(EmergenciaContext context)
         {
-            _conexion = new ConnectionManager(connectionString);
-            _repositorio = new PersonaRepository(_conexion);
+            _context=context;
         }
 
         public GuardarPersonaResponse Guardar(Persona persona)
         {
             try
             {
-                _conexion.Open();
-                _repositorio.Guardar(persona);
-                _conexion.Close();
+                var personaBuscada = _context.Personas.Find(persona.Identificacion);
+                if(personaBuscada != null)
+                {
+                    return new GuardarPersonaResponse("Error la persona se encuentra registrada");
+                }
+                _context.Personas.Add(persona);
+                _context.SaveChanges();
                 return new GuardarPersonaResponse(persona);
             }
             catch (Exception e)
             {
                 return new GuardarPersonaResponse($"Error de la Aplicacion: {e.Message}");
             }
-            finally { _conexion.Close(); }
+            
         }
         public ConsultarPersonaResponse ConsultarTodos()
         {
             try
             {
-                _conexion.Open();
-                List<Persona> personas = _repositorio.ConsultarTodos();
-                _conexion.Close();
+                var personas = _context.Personas.Include(a => a.Apoyo).ToList();
                 return new ConsultarPersonaResponse(personas);
 
             }
@@ -48,21 +47,6 @@ namespace Logica
                 return new ConsultarPersonaResponse($"error de aplicacion: {e.Message}");
             }
 
-        }
-        public BuscarPersonaResponse BuscarxIdentificacion(string identificacion)
-        {
-            try{
-                  _conexion.Open();
-                  Persona persona = _repositorio.BuscarPorIdentificacion(identificacion);
-                  _conexion.Close();
-                  return new BuscarPersonaResponse(persona);
-            }
-            catch(Exception e){
-
-                    return new BuscarPersonaResponse($"error de aplicacion: {e.Message}");
-
-            }
-          
         }
 
 

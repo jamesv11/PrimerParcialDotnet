@@ -9,7 +9,7 @@ import { Persona } from '../models/persona';
 })
 export class PersonaConsultaComponent implements OnInit {
 
-  
+  searchText: string;
   personas: Persona[];
   constructor(private personaService: PersonaService) { }
   ngOnInit(){

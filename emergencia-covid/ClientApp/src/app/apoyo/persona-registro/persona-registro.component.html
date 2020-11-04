@@ -1,23 +1,28 @@
 <div class="main-contenedor">
     <div class="Contenedor-form shadow-lg p-3 mb-5 rounded">
         <h2>Registro</h2>
-        <form>
+        <form [formGroup]="formRegistro">
             <div class="form-row ">
                 <div class="col-md-6 form-group">
-                    <label for="inputIdentifacion">Identificacion</label>
-                    <input type="text" class="form-control" name="inputIdentifacion" [(ngModel)]="persona.identificacion">
+                    <label for="inputIdentificacion">Identificacion</label>
+                    <input type="text" class="form-control" name="inputIdentificacion"
+                        [(ngModel)]="persona.identificacion" formControlName="inputIdentificacion" 
+                        [ngClass]="{ 'is-invalid': submitted && control.inputIdentificacion.errors }">
                 </div>
-                <div class="col-md-6 form-group">
+                <div class=" col-md-6 form-group">
                     <label for="inputNombre">Nombre</label>
-                    <input type="text" class="form-control" name="inputNombre" [(ngModel)]="persona.nombre">
+                    <input type="text" class="form-control" name="inputNombre" [(ngModel)]="persona.nombre"
+                        formControlName="inputNombre">
                 </div>
                 <div class="col-md-6 form-group">
                     <label for="inputApellido">Apellido</label>
-                    <input type="text" class="form-control" name="inputApellido" [(ngModel)]="persona.apellido">
+                    <input type="text" class="form-control" name="inputApellido" [(ngModel)]="persona.apellido"
+                        formControlName="inputApellido">
                 </div>
                 <div class="col-md-6 form-group">
                     <label for="inputSexo">Sexo</label>
-                    <select class="form-control" name="inputSexo" [(ngModel)]="persona.sexo">
+                    <select class="form-control" name="inputSexo" [(ngModel)]="persona.sexo"
+                        formControlName="inputSexo">
                         <option>Seleccione..</option>
                         <option value="M">Masculino</option>
                         <option value="F">Femenino</option>
@@ -25,24 +30,29 @@
                 </div>
                 <div class="col-md-6 form-group">
                     <label for="inputEdad">Edad</label>
-                    <input type="number" class="form-control" name="inputEdad" [(ngModel)]="persona.edad">
+                    <input type="number" class="form-control" [(ngModel)]="persona.edad" name="inputEdad"
+                        formControlName="inputEdad">
                 </div>
                 <div class="col-md-6 form-group">
                     <label for="inputDepartamento">Departamento</label>
-                    <input type="text" class="form-control" name="inputDepartamento" [(ngModel)]="persona.departamento">
+                    <input type="text" class="form-control" name="inputDepartamento" [(ngModel)]="persona.departamento"
+                        formControlName="inputDepartamento">
                 </div>
                 <div class="col-md-6 form-group">
                     <label for="inputCiudad">Ciudad</label>
-                    <input type="text" class="form-control" name="inputCiudad" [(ngModel)]="persona.ciudad">
+                    <input type="text" class="form-control" name="inputCiudad" [(ngModel)]="persona.ciudad"
+                        formControlName="inputCiudad">
                 </div>
                 <div class="col-md-6 form-group">
                     <label for="inputValorApoyo">Valor del apoyo</label>
-                    <input type="number" class="form-control" name="inputValorApoyo" [(ngModel)]="persona.valorApoyo">
+                    <input type="number" class="form-control" name="inputValorApoyo"
+                        [(ngModel)]="persona.apoyo.valorApoyo" formControlName="inputValorApoyo">
                 </div>
             </div>
             <div class="form-group">
                 <label for="inputModalidadApoyo">Modalidad de apoyo</label>
-                <select class="form-control" name="inputApoyo " [(ngModel)]="persona.modalidadApoyo">
+                <select class="form-control" name="inputModalidadApoyo" [(ngModel)]="persona.apoyo.modalidadApoyo"
+                    formControlName="inputModalidadApoyo">
                     <option>Seleccione...</option>
                     <option value="Alimentario">Alimentario</option>
                     <option value="Economico">Economico</option>
@@ -50,9 +60,11 @@
             </div>
             <div class="form-group">
                 <label for="inputFechaRegistro">Fecha de registro</label>
-                <input type="date" class="form-control" name="inputFechaRegistro" [(ngModel)]="persona.fecha">
+                <input type="date" class="form-control" name="inputFechaRegistro" [(ngModel)]="persona.apoyo.fecha"
+                    formControlName="inputFechaRegistro">
             </div>
-            <button type="submit" class="btn btn-primary position" (click)="add()" >Registrar</button>
+            <button class="btn btn-primary position" (click)="onSubmit()" 
+            [disabled]="formRegistro.invalid">Registrar</button>
         </form>
     </div>
     <div class="img-position">

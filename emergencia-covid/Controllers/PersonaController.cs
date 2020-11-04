@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Entidad;
 using Logica;
+using Datos;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
@@ -17,12 +18,10 @@ namespace WebPulsaciones.Controllers
     public class PersonaController : ControllerBase
     {
         private readonly PersonaService _personaService;
-        public IConfiguration Configuration { get; }
-        public PersonaController(IConfiguration configuration)
+        
+        public PersonaController(EmergenciaContext context)
         {
-            Configuration = configuration;
-            string connectionString = Configuration["ConnectionStrings:DefaultConnection"];
-            _personaService = new PersonaService(connectionString);
+            _personaService = new PersonaService(context);
         }
         // GET: api/Persona
         [HttpGet]
@@ -38,6 +37,7 @@ namespace WebPulsaciones.Controllers
         }
 
         
+        /*
         // GET: api/Persona/5
         [HttpGet("{identificacion}")]
         public ActionResult<PersonaViewModel> Get(string identificacion)
@@ -49,6 +49,7 @@ namespace WebPulsaciones.Controllers
         }
         // POST: api/Persona
         
+        */
         [HttpPost]
         public ActionResult<PersonaViewModel> Post(PersonaInputModel personaInput)
         {
@@ -80,10 +81,7 @@ namespace WebPulsaciones.Controllers
                 Edad = personaInput.Edad,
                 Departamento = personaInput.Departamento,
                 Ciudad = personaInput.Ciudad,
-                ValorApoyo = personaInput.ValorApoyo,
-                ModalidadApoyo = personaInput.ModalidadApoyo,
-                Fecha = personaInput.Fecha
-                
+                Apoyo = personaInput.Apoyo              
             };
             return persona;
         }
@@ -100,10 +98,12 @@ namespace WebPulsaciones.Controllers
             Fecha = persona.Fecha;    
         */
         // PUT: api/Persona/5
+        /*
         [HttpPut("{identificacion}")]
         public ActionResult<string> Put(string identificacion, Persona persona)
         {
             throw new NotImplementedException();
         }
+        */
     }
 }

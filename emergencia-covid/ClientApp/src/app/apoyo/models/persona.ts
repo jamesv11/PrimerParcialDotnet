@@ -1,3 +1,5 @@
+import { Apoyo } from "./Apoyo/apoyo";
+
 export class Persona {
     identificacion: string;
     nombre: string;
@@ -6,8 +8,5 @@ export class Persona {
     edad: number;
     departamento: string;
     ciudad: string;
-    valorApoyo: number;
-    modalidadApoyo: string;
-    fecha: Date;
-
+    apoyo : Apoyo = new Apoyo();
 }

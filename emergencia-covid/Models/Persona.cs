@@ -15,9 +15,7 @@ namespace emergencia_covid.Models
         public int Edad { get; set; }
         public String Departamento { get; set; }
         public String Ciudad { get; set; } 
-        public decimal ValorApoyo  { get; set; } 
-        public string ModalidadApoyo { get; set; }
-        public DateTime Fecha { get; set; }      
+        public virtual Apoyo Apoyo {get; set;}    
     }
 
     public class PersonaViewModel : PersonaInputModel
@@ -36,10 +34,12 @@ namespace emergencia_covid.Models
             Edad = persona.Edad;
             Departamento = persona.Departamento;
             Ciudad = persona.Ciudad;
-            ValorApoyo = persona.ValorApoyo;
-            ModalidadApoyo = persona.ModalidadApoyo;
-            Fecha = persona.Fecha;     
+            Apoyo = persona.Apoyo;
+            IdApoyo = persona.ApoyoId;
+
         }
+
+        public int IdApoyo { get; set; }
        
     }
 }
