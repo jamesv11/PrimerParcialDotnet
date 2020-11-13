@@ -15,6 +15,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { PersonaService } from './services/persona.service';
 import { JumbotronComponent } from './jumbotron/jumbotron.component';
 import { FiltroPersonaPipe } from './pipe/filtro-persona.pipe';
+import { AlertModalComponent } from './@base/alert-modal/alert-modal.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { FiltroPersonaPipe } from './pipe/filtro-persona.pipe';
     PersonaRegistroComponent,
     PersonaConsultaComponent,
     JumbotronComponent,
-    FiltroPersonaPipe
+    FiltroPersonaPipe,
+    AlertModalComponent
   ],
   imports: [
     ReactiveFormsModule,

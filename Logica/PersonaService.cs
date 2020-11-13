@@ -99,5 +99,6 @@ namespace Logica
         public string Mensaje { get; set; }
         public Persona Persona { get; set; }
     }
-
 }
+
+
