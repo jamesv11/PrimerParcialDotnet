@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "yTrP3lEO8BIZgaTKfcM/QChWWQRLIteyyHjQgRm5z7RCKLiLRurzi56nHwopNdPH6IAIUNaL0vrC+Xi80xaUxQ==",
+  "dgSpecHash": "Ya+U/vfUyJf3dsJ04y/dumQykDF9vS4WAek8BCi4OFkJqybi/IzT1gOypDIJKF4A1wFJTFbKhdJHIcdhUhTfwQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\JamesV\\OneDrive\\Escritorio\\5 semestre\\ProgramacionWeb\\PrimerParcialDotnet\\Entidad\\Entidad.csproj",
+  "projectFilePath": "C:\\Users\\JamesVanstrahlen\\Desktop\\5 semestre\\5 semestre\\ProgramacionWeb\\PrimerParcialDotnet\\Entidad\\Entidad.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\JamesV\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\JamesV\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
-    "C:\\Users\\JamesV\\.nuget\\packages\\system.componentmodel.annotations\\4.7.0\\system.componentmodel.annotations.4.7.0.nupkg.sha512"
+    "C:\\Users\\JamesVanstrahlen\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\JamesVanstrahlen\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\JamesVanstrahlen\\.nuget\\packages\\system.componentmodel.annotations\\4.7.0\\system.componentmodel.annotations.4.7.0.nupkg.sha512"
   ],
   "logs": []
 }

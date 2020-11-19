@@ -7,3 +7,12 @@ C:\Users\JamesV\OneDrive\Escritorio\5 semestre\ProgramacionWeb\PrimerParcialDotn
 C:\Users\JamesV\OneDrive\Escritorio\5 semestre\ProgramacionWeb\PrimerParcialDotnet\Entidad\obj\Debug\netstandard2.0\Entidad.csproj.CoreCompileInputs.cache
 C:\Users\JamesV\OneDrive\Escritorio\5 semestre\ProgramacionWeb\PrimerParcialDotnet\Entidad\obj\Debug\netstandard2.0\Entidad.dll
 C:\Users\JamesV\OneDrive\Escritorio\5 semestre\ProgramacionWeb\PrimerParcialDotnet\Entidad\obj\Debug\netstandard2.0\Entidad.pdb
+C:\Users\JamesVanstrahlen\Desktop\5 semestre\5 semestre\ProgramacionWeb\PrimerParcialDotnet\Entidad\bin\Debug\netstandard2.0\Entidad.deps.json
+C:\Users\JamesVanstrahlen\Desktop\5 semestre\5 semestre\ProgramacionWeb\PrimerParcialDotnet\Entidad\bin\Debug\netstandard2.0\Entidad.dll
+C:\Users\JamesVanstrahlen\Desktop\5 semestre\5 semestre\ProgramacionWeb\PrimerParcialDotnet\Entidad\bin\Debug\netstandard2.0\Entidad.pdb
+C:\Users\JamesVanstrahlen\Desktop\5 semestre\5 semestre\ProgramacionWeb\PrimerParcialDotnet\Entidad\obj\Debug\netstandard2.0\Entidad.csprojAssemblyReference.cache
+C:\Users\JamesVanstrahlen\Desktop\5 semestre\5 semestre\ProgramacionWeb\PrimerParcialDotnet\Entidad\obj\Debug\netstandard2.0\Entidad.AssemblyInfoInputs.cache
+C:\Users\JamesVanstrahlen\Desktop\5 semestre\5 semestre\ProgramacionWeb\PrimerParcialDotnet\Entidad\obj\Debug\netstandard2.0\Entidad.AssemblyInfo.cs
+C:\Users\JamesVanstrahlen\Desktop\5 semestre\5 semestre\ProgramacionWeb\PrimerParcialDotnet\Entidad\obj\Debug\netstandard2.0\Entidad.csproj.CoreCompileInputs.cache
+C:\Users\JamesVanstrahlen\Desktop\5 semestre\5 semestre\ProgramacionWeb\PrimerParcialDotnet\Entidad\obj\Debug\netstandard2.0\Entidad.dll
+C:\Users\JamesVanstrahlen\Desktop\5 semestre\5 semestre\ProgramacionWeb\PrimerParcialDotnet\Entidad\obj\Debug\netstandard2.0\Entidad.pdb
